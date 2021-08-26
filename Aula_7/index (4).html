@@ -56,14 +56,16 @@
         function calcularImc() {
 
 
+            var nome1 = prompt('Qual seu nome?');
             var peso1 = prompt('Qual seu peso? (Kg)');
             var altura1 = prompt('Qual sua Altura? (m)');
-            var resultado = peso / (altura * altura);
+            var resultado = peso1 / (altura1 * altura1);
             var perfil =  perfil();
-                
 
+                
             var imc = {
 
+                nome : nome1,
                 peso : peso1,
                 altura : altura1,
                 resultadoImc : resultado,
@@ -73,20 +75,42 @@
 
             function perfil() {
 
-            if(resultado <= 18.5) {
-                ' MAGREZA'
-            } else if (resultado >=18.5 && resultado <= 24.9) {
-               ' NORMAL'
-            } else if (resultado >=25 && resultado <=29.9) {
-               ' SOBREPESO'
-            } else {
-               ' OBESIDADE'
+                if(resultado <= 18.5) {
+                    ' MAGREZA'
+                } else if (resultado >=18.5 && resultado <= 24.9) {
+                    ' NORMAL'
+                } else if (resultado >=25 && resultado <=29.9) {
+                    ' SOBREPESO'
+                } else {
+                    ' OBESIDADE'
             }                        
+             }
+
+        alert(`Obrigado ${imc.nome}. Seu IMC é iqual a: ${imc.resultadoImc} e seu perfil é: ${imc.perfilImc}`);
+
+        if(imc.perfilImc == 'SOBREPESO' || 'OBESIDADE'){
+
+            var resp_nutri = prompt(`Recomendamos uma consulta com um de nossos Nutricionistas, Gostaria de agendar? Digite Sim ou Não:`);
+
+            if(resp_nutri == 'Sim'){
+
+                var diasem = prompt('Digite o dia da Semana que gostaria de agendar:');
+                
+                var hora = prompt(`Digite a hora em que deseja ser atendido. Formato: 00:00`);
+
+                alert(`Obrigado ${imc.nome} ,sua consulta esta agendada para: ${diasem} as ${hora} com a Dr. Luana Nagydai`);
+
+            } else {
+
+                alert('Obrigado por utilizar nosso serviço! Volte Sempre! ');
+                
+            }
+
+        } else {
+
+        }
         }
 
-        alert(`Seu IMC é iqual a: ${imc.resultadoImc} e sua seu perfil é: ${imc.perfilImc}`);
-
-        }
     </script>
 
 </body>
