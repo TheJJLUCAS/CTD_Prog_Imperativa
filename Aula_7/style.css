@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+body {
+
+    background-color: #14081b;
+
+}
+
+
+.titulo {
+
+    font-family: 'Poppins', sans-serif;
+    color: aquamarine;
+    font-size: 50px;
+    margin-left: 20px;
+
+}
+
+.subtitle {
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(98, 255, 247);
+    margin-left: 20px;
+    font-size: 20px;
+
+}
+
+.texto {
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: whitesmoke;
+    margin-left: 20px;
+    text-align: justify;
+
+}
+
+.botao {
+
+    background-color: aquamarine;
+    padding: 10px 25px 10px 25px;
+    border-color: aquamarine;
+    border-radius: 10px;
+    color: #14081b;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 15px;
+    margin-left: 20px;
+
+}
